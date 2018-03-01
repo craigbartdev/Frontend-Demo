@@ -1,0 +1,226 @@
+body{
+    color: white;
+    font-family: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: darkblue;
+}
+#content{ /*for narrow screens*/
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(4, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 960px;
+    margin: 0 auto;
+    grid-gap: 0px;
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "section section section section"
+    "section section section section"
+    "aside aside aside aside"
+    "footer footer footer footer";
+}
+
+@media only screen and (min-width: 760px){
+    #content{ /*for wide screens*/
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-gap: 0px;
+        grid-template-areas: 
+        "header header header header"
+        "nav nav nav nav"
+        "section section section aside"
+        "section section section aside"
+        "section section section aside"
+        "footer footer footer footer";
+    }
+
+    section h2{
+        text-align: left;
+    }
+
+    aside{
+        grid-area: aside;
+        border-bottom: darkblue 3px solid;
+        border-left: darkblue 3px solid;
+        padding: 20px; 
+        background: forestgreen;
+    }
+    
+    aside li{
+        display: inline;
+        text-align: center;
+        padding-top:10px;
+    }
+
+    aside ul{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    nav{
+        grid-area: nav;
+        text-align: center;
+        padding: 20px; 
+    }
+
+    nav a{
+        padding: 0 40px 30px 0px;
+        font-size: 25px;
+    }
+
+    section img{
+        float: right;
+        margin: 0px 20px 5px;
+        border: 2px solid darkblue;
+    }
+} 
+@media only screen and (max-width: 760px){
+    section img{
+        display: block; /*display center on small screens*/
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        margin-bottom:5px;
+        border: 2px solid darkblue;
+        border-radius: 10px;
+    }
+}
+
+header{
+    text-align: center;
+    grid-area: header;
+    border: maroon 3px solid;
+    border-style: ridge;
+    padding: 20px; 
+    padding-top: 0px;
+    background: forestgreen;
+}
+
+header #branding{
+    float: center;
+    margin:0;
+    color: darkblue;
+    font-size: 30px;
+}
+
+h3{
+    color: lightgray;
+}
+
+p{
+    font-size: 20px;
+}
+
+
+section{
+    grid-area: section;
+    border-bottom: darkblue 3px solid;
+    padding: 20px; 
+    background: forestgreen;
+    text-align: center;
+    line-height: 1.3;
+}
+
+section p{
+    text-align: justify;
+}
+
+section ul{
+    list-style-type: none;
+    font-size: 20px;
+    padding-right: 20px; 
+}
+
+section li{
+    padding: 5px;
+}
+
+section a{
+    text-decoration: none;
+    color: white;
+}
+
+section a:hover{
+    color: blue;
+}
+
+aside{
+    grid-area: aside;
+    border-bottom: darkblue 3px solid;
+    padding: 20px; 
+    background: forestgreen;
+    text-align: center;
+    font-size: 18px;
+}
+
+aside h2{
+    font-size: 24px;
+}
+
+
+aside li{
+    float: left;
+    text-align: justify;
+    width: 100%; 
+    padding-bottom: 10px;
+}
+
+aside ul{
+    list-style-type: none;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+nav{
+    grid-area: nav;
+    text-align: center;
+    padding: 20px; 
+    background: darkblue;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav li{
+    display: inline;
+    padding: 0 20px 25px 0px;
+    font-size: 25px;
+}
+
+nav .current a{
+    color: lime;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: lightpink;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    grid-area: footer;
+    border-bottom: none;
+    padding: 0px; 
+    background: forestgreen;
+}
+
+form{
+    text-align: center;
+    padding-top: 20px;
+}
+.button1{
+    margin: 5px;
+}
+
+#explain{
+    font-size: 14px;
+}

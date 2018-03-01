@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"> <!--sets width based on device-->
+    <meta name="description" content="Todo Page">
+    <meta name="keywords" content="Todo Page", "Frontend Web Demo">
+    <meta name="author" content="Craig Bartholomew">
+    <title>Todo Page</title>
+    <link rel="stylesheet" href="./css/todostyle.css">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <div id="branding">
+                <h1>
+                    Frontend Web Demo
+                </h1>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li class="current">
+                    <a href="todo.html">Todo</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <div class="container">
+                    <p id="addone">
+                        <label for="new-task">Add Item</label> 
+                        <input id="new-task" type="text">
+                        <button class="adder">Add</button>
+                    </p>
+                
+
+                <h3>Todo</h3>
+                <ul id="incomplete-tasks">
+                    <li><input type="checkbox">
+                        <label>Pay Bills</label>
+                        <input type="text">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </li>
+                    <li><input type="checkbox">
+                        <label>Eat Dinner</label>
+                        <input type="text">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </li>
+                </ul>
+
+                <h3>Completed</h3>
+                <ul id="completed-tasks">
+                    <li>
+                        <input type="checkbox" checked>
+                        <label>See Doctor</label>
+                        <input type="text">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <p>Frontend Web Demo &copy; 2018</p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
